@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<html>
+<body ng-app="example.app.crud">
+{% verbatim %}
+<div class="content" ng-controller="AppController">
+    <ol>
+        <li ng-repeat="org in orgs">{{ org.title }} | {{ org.income }}
+          <button ng-click="deleteUser(org)">delete</button>
+        </li>
+    </ol>
+  New Org <input type="text" ng-model="newName">
+  Income <input type="text" ng-model="newIncome">
+  <button ng-click="addUser()">Add</button>
+</div>
+{% endverbatim %}
+<script src="{% static "underscore/underscore.js" %}"></script>
+<script src="{% static "angular/angular.js" %}"></script>
+<script src="{% static "angular-resource/angular-resource.js" %}"></script>
+<script src="{% static "js/script.js" %}"></script>
+</body>
+</html>

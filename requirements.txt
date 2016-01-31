@@ -1,0 +1,8 @@
+Django>=1.9
+djangorestframework>=3.3
+pillow
+
+# Optional
+Werkzeug
+django-extensions
+MySQL-python==1.2.5
